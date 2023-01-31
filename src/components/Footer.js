@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
       <footer id="footer">
-        <img src="../assets/logo_footer.png" alt="icon"/>
+        <img src="../assets/img/logo_footer.png" alt="icon"/>
         <nav id="footer_nav">
             <ul>
                 <li>Home</li>

@@ -6,7 +6,7 @@ import NavBar from './NavBar';
       const Header = () => {
         return (
           <header id="header">
-            <img src="../assets/Logo.svg" alt="logo"/>
+            <img src="../assets/img/Logo.svg" alt="logo"/>
             <NavBar/>
           </header>
         );

@@ -1,0 +1,49 @@
+#hero_section {
+    max-width: 1400px;
+    max-height: auto;
+   
+    background-color: #495e57;
+    display :grid;
+    grid-template-columns:60vw 30vw ;
+    
+   
+}
+#hero_leftside{ display: flex;
+    flex-direction: column;
+    margin:4vw;}
+#hero_rightside{
+    
+    height:120px;
+    margin: 2vw;
+}
+#hero_rightside img{
+    width:250px;
+    height:auto;
+    margin:80px 40px auto 40px ;
+   border-radius: 16px;}
+
+h1 {color:#f4ce14;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    margin-top:10px;}
+#Chicago {color:#FFFFFF;
+          font-size:22px;
+         padding-left:20px;
+         padding-top: 15px;
+        font-family: cursive;
+        }
+#description {color:#FFFFFF;
+             font-size:16px;
+            font-family: cursive;
+            padding-left: 40px;
+            padding-top: 10px;
+}
+#reserv_btn {background-color:#f4ce14;
+                color:#333333;
+                border-radius: 16px;
+                border-style: none;;
+                font-size: 22px;
+                font-family: Geneva;
+                height:50px;
+                width: auto;
+                padding: auto;}
