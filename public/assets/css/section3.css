@@ -1,0 +1,36 @@
+section3{
+    background-color: #ffffff;
+    max-width: 1200px;
+}
+h3 { margin: 40px;
+     padding:auto;
+     text-align: center;
+     color:#333333;
+     font-size: 32px;
+    font-family:cursive;}
+
+#rating{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.rating-card{
+    display:block;
+    background-color: #edefee;
+    color:#333333;
+    width: 150px;
+    height: 180px;
+    position: relative;
+
+}
+.card-title{display: block;}
+img {
+     width:80px; height: auto;
+    display: inline-block;}
+
+.uname{ 
+    display: inline-block;
+    top:40vh;
+     
+}
+p {display: block;}
