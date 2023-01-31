@@ -1,0 +1,50 @@
+#about {background-color: #f4ce14;
+       max-width: 1400px;
+       max-height: auto;
+     
+       display:flex;
+       flex-direction: row;
+       justify-content:center;
+}
+       
+
+#about_leftside{ display: flex;
+    flex-direction: column;
+    margin:4vw;}
+#about_rightside{
+    
+    height:120px;
+    margin: 2vw;
+}
+#img1{
+    position: relative;
+    top:10px;
+    left:20px;
+    width:250px;
+    height:auto;
+    
+   border-radius: 16px;}
+#img2{
+    top:40px;
+    left:120px;
+    width:250px;
+    height:auto;
+    
+   border-radius: 16px;}
+
+h1 {color:#333333;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    margin-top:10px;}
+#Chicago2 {color:#333333;
+          font-size:22px;
+         padding-left:20px;
+         padding-top: 15px;
+        font-family: cursive;
+        }
+#description2 {color:#333333;
+             font-size:16px;
+            font-family: cursive;
+            padding-left: 40px;
+            padding-top: 10px;
+}
