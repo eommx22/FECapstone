@@ -1,0 +1,61 @@
+#about {background-color: #f4ce14;
+       max-width: 1400px;
+       height: auto;
+       display:grid;
+       grid-auto-flow: column;
+       gap: 100px;
+}
+       
+
+#about_leftside{ 
+    display: block;
+    margin:40px 60px 40px 120px;}
+#about_rightside{
+    
+    height:120px;
+    margin: 40px;
+}
+#img1{
+    position: relative;
+    top:100px;
+    left:50px;
+    width:250px;
+    height:auto;
+    
+   border-radius: 16px;}
+#img2{
+    top:60px;
+    left:120px;
+    width:250px;
+    height:auto;
+    
+   border-radius: 16px;}
+
+#title4 {color:#333333;
+         text-align: left;
+         font-size: 40px;
+         font-family: 'Lucida Sans', 'Lucida Sans Regular';
+         margin-top:10px;}
+#Chicago2 {color:#333333;
+          font-size:22px;
+          text-align: left;
+          padding-left:20px;
+          padding-top: 15px;
+        font-family: cursive;
+        }
+#description2 {color:#333333;
+            text-align: left;
+            font-size:16px;
+            font-family: cursive;
+            padding-left: 40px;
+            padding-top: 10px;
+}
+
+@media only screen and (max-width: 600px ){
+    #about{display: grid;
+           grid-auto-flow: row;
+            gap: 15px;
+            align-items: center;
+          margin: auto;
+         padding-left: 25px;}
+  }

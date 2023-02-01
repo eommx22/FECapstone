@@ -59,5 +59,8 @@ border-style: none;;
 font-size: 22px;
 font-family: Geneva;
 height:50px;
-width: auto;
+width: 200px;
 padding: auto;}
+
+button:hover{
+       color:#FFFFFF}

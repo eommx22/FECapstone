@@ -1,10 +1,14 @@
-const About = () => {
+const Section4 = () => {
     return (
       <section id="about">
           <div id="about_leftside">
-            <h1>Little Lemon</h1>
+            <h1 id="title4">Little Lemon</h1>
             <h3 id="Chicago2">Chicago</h3>
-            <p id="description2">Little Lemon is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+            <p id="description2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Aenean consequat feugiat nibh, in 
+            viverra nibh tincidunt nec. Aenean dui tellus, sollicitudin 
+            non arcu a, congue pretium tortor. Donec at leo.</p>
           
           </div>
           <div id="about_rightside">
@@ -17,4 +21,4 @@ const About = () => {
     );
   };
   
-  export default About;
+  export default Section4;

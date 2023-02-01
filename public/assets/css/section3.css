@@ -33,4 +33,5 @@ img {
     top:40vh;
      
 }
-p {display: block;}
+p {display: block;
+   padding-bottom: 40px;}
