@@ -1,5 +1,6 @@
 #about {background-color: #f4ce14;
        max-width: 1400px;
+       width: auto;
        height: auto;
        display:grid;
        grid-auto-flow: column;

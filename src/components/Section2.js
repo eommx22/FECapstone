@@ -32,7 +32,7 @@ const Section2= () => {
                <span class="left">Lemon Dessert</span>
                <span class="right">$ 9.45</span>
             </div>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Nulla pharetra, lorem nec interdum finibus, augue.</p>
             <button type="button">Order a delivery</button>
           </section>

@@ -1,17 +1,16 @@
-body {background-color: "FFFFFF";}
+body {background-color: "FFFFFF";
+      width:auto;}
 
 @media only screen and (min-width: 601px ){
 header { display: grid;
          height: 80px;
-         
+         width: auto;
         grid-template-columns:  15vw 80vw;
          column-gap: auto;
         justify-items: center;
         margin:15px;}
 }
-header nav {
-        position: relative;
-        top:20%;}        
+        
 
 header img {align-self: center; 
            position: relative;
