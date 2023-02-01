@@ -20,7 +20,7 @@ header img {align-self: center;
             height:auto;
            width:auto}
 
-header  ul, ul li , ul li a{
+header  ul, ul li , ul li .nav-item {
      display:grid;
      grid-auto-flow: column;
      
@@ -37,14 +37,14 @@ header ul li {
       justify-content: stretch;
 }
 
-header a {text-decoration: none;
+header .nav-item {text-decoration: none;
           color: #495e57;}
-header a:hover {color:#ee9972;}
+header .nav-item:hover {color:#ee9972;}
 
 
 @media only screen and (max-width: 600px ){
   
-  header ul, ul li, ul li a { display: flex;
+  header ul, ul li, ul li .nav-item { display: flex;
            flex-direction: column;}
 
   
