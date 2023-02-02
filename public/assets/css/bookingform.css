@@ -1,0 +1,44 @@
+#bookingformdiv{
+    background-color: #ee9972;
+    color: #333333;
+    margin:auto;
+    width:400px;
+    
+    border:  3px solid burlywood;
+}
+
+
+#bookingform{
+   
+    display: grid;
+    grid-auto-flow: row;
+    margin: auto;
+    padding: 30px 50px;
+    width:300px;
+}
+#bookingtitle{ 
+    background-color: #ee9972;
+    color: #333333;
+    width: 400px;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 22px;
+    text-align: center;
+    
+}
+
+#reserve-table-btn {
+    
+    height:40px;
+    padding: auto;
+    margin: 25px auto;}
+
+
+label{padding-top: 20px;}
+input { 
+    font-size: 20px;
+    }
+#number-of-guests{
+    text-align: left;
+}

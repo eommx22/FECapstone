@@ -6,31 +6,31 @@ const Section2= () => {
            <button type="button" >Online Order</button>
         </div>
         <div id="row2">
-          <section id="card1" class="card">
+          <section id="card1" className="card">
             <img src="../assets/img/greek salad.jpg" alt="salad"/>
-            <div class="row3">
-               <span class="left">Greek salad</span>
-               <span class="right">$ 10.75</span>
+            <div className="row3">
+               <span className="left">Greek salad</span>
+               <span className="right">$ 10.75</span>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra,
                lorem nec interdum finibus, augue.</p>
             <button type="button">Order a delivery</button>
           </section>
-          <section id="card2" class="card">
+          <section id="card2" className="card">
             <img src="../assets/img/Bruschetta.jpg" alt="bruschetta"/>
-            <div class="row3">
-                <span class="left">Bruschetta</span>
-                <span class="right">$ 8.50</span>
+            <div className="row3">
+                <span className="left">Bruschetta</span>
+                <span className="right">$ 8.50</span>
             </div>
             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra,
                lorem nec interdum finibus, augue.</p>
             <button type="button">Order a delivery</button>
           </section>
-          <section id="card3" class="card">
+          <section id="card3" className="card">
             <img src="../assets/img/lemon dessert.jpg" alt="lemondessert"/>
-            <div class="row3">
-               <span class="left">Lemon Dessert</span>
-               <span class="right">$ 9.45</span>
+            <div className="row3">
+               <span className="left">Lemon Dessert</span>
+               <span className="right">$ 9.45</span>
             </div>
             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Nulla pharetra, lorem nec interdum finibus, augue.</p>

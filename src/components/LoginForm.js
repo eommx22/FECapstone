@@ -1,19 +1,18 @@
 const LoginForm = () => {
     return (
-        <>
-           <h1>Login Form</h1>
-           <form>
-               <label for="firstname"></label>
-               <input type="text" id="firstname" placeholder="firstname" required></input>
-               <label for="lastname"></label>
-               <input type="text" id="lastname" placeholder="lastname" required></input>
-               <label for="password"></label>
-               <input type="password" id="password" placeholder="password" required></input>
-             
-               <button type="submit">Submit</button>
+        <div id="logindiv">
+           <h1 id="logintitle">Login</h1>
+           <form id="loginform">
+               <label for="uname">Name:
+               <input type="text" id="uname" placeholder="Username" required></input>
+               </label>
+               <label for="password">Password:
+               <input type="password" id="password" placeholder="Password" required></input>
+               </label>
+               <button type="submit" id="loginbtn">Login</button>
            </form>
           
-        </>
+        </div>
     );
   };
   
