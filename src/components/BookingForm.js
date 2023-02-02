@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+
     
     const BookingForm= () => {
         const [Name, setName] = useState("");
@@ -8,6 +9,16 @@ import React, {useState} from 'react'
         const [occasion, setOccasion] = useState("");
         const [guests, setGuests] = useState("");
         const [requirements, setRequirements] = useState("");
+   
+        
+        const [availableTimes, setavailableTimes] = useState(['17:00','18:00','19:00','20:00','21:00','22:00']);
+   
+         
+
+        function handleClick(){
+      
+            setavailableTimes(availableTimes);
+         }
 
 
         return (
@@ -27,9 +38,19 @@ import React, {useState} from 'react'
                <input type="date" id="date"
                   value={date} onChange={(e) => setDate(e.target.value)} required></input>
 
-               <label htmlFor="time">Time:</label>
-               <input type="time" id="time" 
-                  value={time} onChange={(e) => setTime(e.target.value)} required></input>
+               {/* <label htmlFor="time">Time:</label>
+                <input type="time" id="time" 
+                  value={time} onChange={(e) => setTime(e.target.value)} required></input> */}
+               <label htmlFor="res-time">Occasion</label> 
+               <select id="res-time" value={time}
+                  onChange={(e) => {setTime(e.target.value);}}>
+                  <option>17:00</option>
+                  <option>18:00</option>
+                  <option>19:00</option>
+                  <option>20:00</option>
+                  <option>21:00</option>
+                  <option>22:00</option>
+                </select>
                       
                <label htmlFor="occasion">Occasion</label> 
                <select id="occasion" value={occasion}
