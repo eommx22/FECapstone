@@ -5,14 +5,14 @@ import Section1 from './Section1';
 
 
 
-const Main = () => {
+const Hero = () => {
     return (
         <>
            <Section1/>
-          
+           
         </>
     );
   };
   
-  export default Main;
+  export default Hero;
 

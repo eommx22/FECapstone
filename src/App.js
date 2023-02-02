@@ -1,16 +1,16 @@
 
 
 import './App.css';
-import Header from './components/Header';
-import Main from './components/Main';
+
 import Footer from './components/Footer';
-//import {Routes, Route, Link} from 'react-router-dom';
+import NavBar from './components/NavBar';
+
 
 function App() {
   return (
-    <>
-       <Header/>
-       <Main/>
+    <> 
+       
+       <NavBar/>
        <Footer/>
 
     </>

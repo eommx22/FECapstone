@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './NavBar';
+//import NavBar from './NavBar';
 
 
       
@@ -7,7 +7,7 @@ import NavBar from './NavBar';
         return (
           <header id="header">
             <img src="../assets/img/Logo.svg" alt="logo"/>
-            <NavBar/>
+            {/* <NavBar/> */}
           </header>
         );
       };

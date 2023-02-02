@@ -1,17 +1,21 @@
 import React from 'react';
 import {Routes, Route, Link} from 'react-router-dom';
-import Main from './Main';
-//import Section1 from './Section1';
+
+import Hero from './Hero';
+import About from './About';
+import LoginForm from './LoginForm';
 import Section2 from './Section2';
-//import Section3 from './Section3';
-import Section4 from './Section4';
+
 import BookingPage from './BookingPage';
+import Specials from './Specials';
 
 
       const NavBar = () => {
         return (
           <>
-          <nav id="navbar">
+          <header id="header">
+            <img src="../assets/img/Logo.svg" alt="logo"/>
+            <nav id="navbar">
             <ul>
                 <li><Link to="/" className="nav-item">Home</Link></li>
                 <li><Link to="/about" className="nav-item">About</Link></li>
@@ -22,13 +26,15 @@ import BookingPage from './BookingPage';
             </ul>
 
           </nav>
+          </header>
+          
           <Routes>
-            <Route path="/home" element={<Main/>} />
-            <Route path="/about" element={<Section4/>} />
-            <Route path="/highlights" element={<Section2/>} />
+            <Route path="/" element={<Hero/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/highlights" element={<Specials/>} />
             <Route path="/reservations" element={<BookingPage/>} />
             <Route path="/order" element={<Section2/>} />
-            <Route path="/login" element={<Main/>} />
+            <Route path="/login" element={<LoginForm/>} />
          </Routes>
          </>
         );

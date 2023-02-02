@@ -1,9 +1,10 @@
 #hero_section {
-    max-width: 1400px;
-    max-height: auto;
-    width: auto;
-   
     background-color: #495e57;
+    padding-top: 60px;
+    max-width: 1400px;
+    margin: auto;
+   
+    
     display :grid;
     grid-template-columns:60vw 30vw ;
     
