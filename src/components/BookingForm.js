@@ -1,41 +1,33 @@
-import React, {useState, useReducer} from 'react';
+import React, {useState} from 'react';
 
     
-    const BookingForm= () => {
+    const BookingForm= (props) => {
         const [Name, setName] = useState("");
         const [Phone, setPhone] = useState("");
         const [date, setDate] = useState("");
-        const [time, setTime] = useState("");
+        //const [time, setTime] = useState("");
         const [occasion, setOccasion] = useState("");
         const [guests, setGuests] = useState("");
         const [requirements, setRequirements] = useState("");
-   
-       
-        let output= ['17:00','18:00','19:00','20:00','21:00','22:00'];
-        
-        
 
-        const [availableTimes, setavailableTimes] = useReducer(reducer,output);
-   
-        function reducer() {
-           let num=7;
-           for (let i=0; i<output.length; i++)
-            {if (output[i]===time) {num=i;break;}}
-            output =availableTimes.splice(num,1);
-            return output;
-        } 
+
+        const [time, setTime] = useState({initializeTimes});
+      
+        function initializeTimes(){
+          
+           setTime(props.availableTimes.map((times) => <option>{times}</option>));
+       
+        }
 
         function handleClick(){
-            alert(availableTimes);
-            reducer();
-            setavailableTimes(availableTimes);
-            alert(availableTimes);
-         }
+             
+             alert(props.output+' '+props.availableTimes);
+             }
 
 
         return (
 
-            <form id="bookingform">
+            <form id="bookingform" >
                
                <label htmlFor="Name">Name:</label>
                <input type="text" id="Name" placeholder="Name"  minLength={2}
@@ -50,19 +42,13 @@ import React, {useState, useReducer} from 'react';
                <input type="date" id="date"
                   value={date} onChange={(e) => setDate(e.target.value)} required></input>
 
-               {/* <label htmlFor="time">Time:</label>
-                <input type="time" id="time" 
-                  value={time} onChange={(e) => setTime(e.target.value)} required></input> */}
-               <label htmlFor="res-time">Occasion</label> 
-               <select id="res-time" value={time}
-                  onChange={(e) => {setTime(e.target.value)} } required>
-                  <option>{output[0]}</option>
-                  <option>{output[1]}</option>
-                  <option>{output[2]}</option>
-                  <option>{output[3]}</option>
-                  <option>{output[4]}</option>
-                  <option>{output[5]}</option>
-                </select>
+              
+               <label htmlFor="res-time">Time:</label> 
+               <select id="res-time" value={time} required onChange={(e) => 
+                                        {setTime(e.target.value)}}>
+                 {initializeTimes}
+                 </select> 
+             
                       
                <label htmlFor="occasion">Occasion</label> 
                <select id="occasion" value={occasion}
@@ -78,7 +64,7 @@ import React, {useState, useReducer} from 'react';
                   value={guests} onChange={(e) => setGuests(e.target.value)} required></input>
 
                <label htmlFor="requirements">Special requirements:</label>
-               <textarea rows="4" id="requirements"
+               <textarea rows="4" id="requirements" 
                   value={requirements} onChange={(e) => setRequirements(e.target.value)}>
                </textarea>
 
