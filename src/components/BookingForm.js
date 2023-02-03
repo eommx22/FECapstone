@@ -5,25 +5,20 @@ import React, {useState} from 'react';
         const [Name, setName] = useState("");
         const [Phone, setPhone] = useState("");
         const [date, setDate] = useState("");
-        //const [time, setTime] = useState("");
+        const [time, setTime] = useState("");
+        const [timeInd, setTimeIndex] = useState("");
         const [occasion, setOccasion] = useState("");
         const [guests, setGuests] = useState("");
         const [requirements, setRequirements] = useState("");
 
-
-        const [time, setTime] = useState({initializeTimes});
       
-        function initializeTimes(){
-          
-           setTime(props.availableTimes.map((times) => <option>{times}</option>));
-       
-        }
 
         function handleClick(){
              
-             alert(props.output+' '+props.availableTimes);
+             alert(Name+ ' '+timeInd);
+             alert(props.availableTimes);
+             
              }
-
 
         return (
 
@@ -34,7 +29,7 @@ import React, {useState} from 'react';
                  maxLength={30}
                   value={Name} onChange={(e) => setName(e.target.value)} required></input>
 
-               <label htmlFor="Phone">Phone number:</label>
+               <label htmlFor="Phone">Phone number</label>
                <input type="tel" id="Phone" placeholder="Phone number" 
                   value={Phone} onChange={(e) => setPhone(e.target.value)} required></input>
 
@@ -45,8 +40,22 @@ import React, {useState} from 'react';
               
                <label htmlFor="res-time">Time:</label> 
                <select id="res-time" value={time} required onChange={(e) => 
-                                        {setTime(e.target.value)}}>
-                 {initializeTimes}
+                                        {setTime(e.target.value);
+                                         setTimeIndex(e.target.selectedIndex);
+                                          } }  >
+                  {/* <option>{props.availableTimes[0]}</option>
+                  <option>{props.availableTimes[1]}</option>
+                  <option>{props.availableTimes[2]}</option>
+                  <option>{props.availableTimes[3]}</option>
+                  <option>{props.availableTimes[4]}</option>
+                  <option>{props.availableTimes[5]}</option> */}
+                  <option>{'17:00'}</option>
+                  <option>{'18:00'}</option>
+                  <option>{'19:00'}</option>
+                  <option>{'20:00'}</option>
+                  <option>{'21:00'}</option>
+                  <option>{'22:00'}</option>
+
                  </select> 
              
                       
@@ -58,8 +67,7 @@ import React, {useState} from 'react';
                   <option>Anniversary</option>
                   <option>Other</option>
                 </select>
-
-               <label htmlFor="guests">Number of Guests:</label>
+               <label htmlFor="guests">Number of Guests</label>
                <input type="number" id="guests" min="1" max="30"
                   value={guests} onChange={(e) => setGuests(e.target.value)} required></input>
 
