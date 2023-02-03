@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useReducer} from 'react';
 
     
     const BookingForm= () => {
@@ -10,14 +10,26 @@ import React, {useState} from 'react';
         const [guests, setGuests] = useState("");
         const [requirements, setRequirements] = useState("");
    
+       
+        let output= ['17:00','18:00','19:00','20:00','21:00','22:00'];
         
-        const [availableTimes, setavailableTimes] = useState(['17:00','18:00','19:00','20:00','21:00','22:00']);
+        
+
+        const [availableTimes, setavailableTimes] = useReducer(reducer,output);
    
-         
+        function reducer() {
+           let num=7;
+           for (let i=0; i<output.length; i++)
+            {if (output[i]===time) {num=i;break;}}
+            output =availableTimes.splice(num,1);
+            return output;
+        } 
 
         function handleClick(){
-      
+            alert(availableTimes);
+            reducer();
             setavailableTimes(availableTimes);
+            alert(availableTimes);
          }
 
 
@@ -43,13 +55,13 @@ import React, {useState} from 'react';
                   value={time} onChange={(e) => setTime(e.target.value)} required></input> */}
                <label htmlFor="res-time">Occasion</label> 
                <select id="res-time" value={time}
-                  onChange={(e) => {setTime(e.target.value);}}>
-                  <option>17:00</option>
-                  <option>18:00</option>
-                  <option>19:00</option>
-                  <option>20:00</option>
-                  <option>21:00</option>
-                  <option>22:00</option>
+                  onChange={(e) => {setTime(e.target.value)} } required>
+                  <option>{output[0]}</option>
+                  <option>{output[1]}</option>
+                  <option>{output[2]}</option>
+                  <option>{output[3]}</option>
+                  <option>{output[4]}</option>
+                  <option>{output[5]}</option>
                 </select>
                       
                <label htmlFor="occasion">Occasion</label> 
