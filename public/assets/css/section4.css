@@ -20,7 +20,7 @@
      }
      #img1{
         position: relative;
-        top:0px;
+        top:100px;
         left:0px;
         width:250px;
         height:auto;
@@ -29,8 +29,8 @@
         border-radius: 16px;}
      #img2{
          position: relative;
-         top:5vh;
-         left:80px;
+         top:20px;
+         left:140px;
          width:250px;
          height:auto;
          margin:auto;

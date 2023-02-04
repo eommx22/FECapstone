@@ -47,3 +47,7 @@ input , select{
     text-decoration: none;}
 .button1:hover{color:#FFFFFF;
              text-decoration: none;}
+
+input:focus:invalid{
+    color:red;
+}

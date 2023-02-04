@@ -1,0 +1,12 @@
+#bookingConfirmation {background-color: #edefee;
+                      margin: auto;
+                      min-height:350px;
+                      width:350px;}
+#success {font-family:'Times New Roman', Times, serif;
+          color:#ee9972;
+          padding: 80px;}
+
+.space {width:auto;
+        min-height:50px;
+        margin: auto;
+        background-color: #FFFFFF;}

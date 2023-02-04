@@ -6,6 +6,7 @@ import LoginForm from './LoginForm';
 import Section2 from './Section2';
 
 import BookingPage from './BookingPage';
+import ConfirmedBooking from './ConfirmedBooking';
 import Specials from './Specials';
 import Main from './Main';
 
@@ -33,6 +34,7 @@ import Main from './Main';
             <Route path="/about" element={<About/>} />
             <Route path="/highlights" element={<Specials/>} />
             <Route path="/reservations" element={<BookingPage/>} />
+            <Route path="/confirmation" element={<ConfirmedBooking/>} />
             <Route path="/order" element={<Section2/>} />
             <Route path="/login" element={<LoginForm/>} />
          </Routes>

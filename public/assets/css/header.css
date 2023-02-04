@@ -1,5 +1,7 @@
 body {background-color: "FFFFFF";
-      width:auto;}
+      
+      max-width: 1400px;
+       margin:auto;}
 
 @media only screen and (min-width: 601px ){
 header { display: grid;

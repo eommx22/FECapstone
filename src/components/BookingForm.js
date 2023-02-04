@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import { useEffect } from "react"; 
-import { Link} from 'react-router-dom';
+//import { useEffect } from "react"; 
+import { useNavigate } from "react-router-dom";
+
+//import { Link} from 'react-router-dom';
 
     
     const BookingForm= (props) => {
@@ -8,51 +10,84 @@ import { Link} from 'react-router-dom';
         const [Phone, setPhone] = useState("");
         const [date, setDate] = useState("");
         const [time, setTime] = useState("");
-        const [occasion, setOccasion] = useState("");
-        const [guests, setGuests] = useState("");
+        const [occasion, setOccasion] = useState("None");
+        const [guests, setGuests] = useState(1);
         const [requirements, setRequirements] = useState("");
 
        
 
-        const [bookingData, setBookingData] = useState([]); 
+       const [bookingData, setBookingData] = useState([]); 
        
+        const navigate = useNavigate();
 
 
-       useEffect(() => { 
-        
-         fetch(`http://localhost:3000/bookings.json`) 
-         .then((response) => response.json()) 
-        // .then((data =>console.log(data)) );
-        .then((data) => setBookingData(data)) 
-        .catch((error) => console.log(error)); 
-  }, []); 
- 
-      
-  function handleClick(){ 
-             
-             bookingData.name=Name;
-             bookingData.phone=Phone;
-             bookingData.date=date;
-             bookingData.time=time;
-             bookingData.occasion=occasion;
-             bookingData.guests=guests;
-             bookingData.requirements=requirements;
+        /* const fetchData = () => { 
+
+          useEffect(() => { 
+
+          console.log(JSON.stringify(bookingData));   
+          try {
             
-             alert( 
-               'You have successfully reserved table : \n\n'+
-                    'Name: '+bookingData.name+'\n'+
-                    'Phone: '+bookingData.phone+'\n'+
-                    'Date: '+bookingData.date+'\n'+
-                    'Time: '+bookingData.time+'\n'+
-                    'Occasion: '+bookingData.occasion+'\n'+
-                    'Number of Guests: '+bookingData.guests+'\n'+
-                    'Special requirements: '+bookingData.requirements);
-            
-             }
-
-        return (
+            fetch(`http://localhost:3000/public/bookings.json`, {
+              method: 'POST',
+              mode: 'cors', 
+              cache: 'no-cache', 
+              credentials: 'same-origin',
+              headers: {
+                    'Content-Type': 'application/json' },
+              body: JSON.stringify(bookingData),
+               })
+               .then((response) => response.json()) 
+               .then((data) => setBookingData(data)) 
+              } 
+            catch (err) {
+             console.log(err);
+           };
+            },[]);
           
-            <form id="bookingform" >
+          }; */
+
+
+   const handleSubmit =(e) => {
+ 
+        e.preventDefault();
+        setName("");
+        setPhone("");
+        setDate("");
+        setTime("");
+        setOccasion("None");
+        setGuests(1);
+        setRequirements("");
+        
+        bookingData.name=Name;
+        bookingData.phone=Phone;
+        bookingData.date=date;
+        bookingData.time=time;
+        bookingData.occasion=occasion;
+        bookingData.guests=guests;
+        bookingData.requirements=requirements;
+        setBookingData(bookingData);
+        
+        //fetchData();
+
+        alert( 
+           'You have successfully reserved table : \n\n'+
+                'Name: '+Name+'\n'+
+                'Phone: '+Phone+'\n'+
+                'Date: '+bookingData.date+'\n'+
+                'Time: '+bookingData.time+'\n'+
+                'Occasion: '+bookingData.occasion+'\n'+
+                'Number of Guests: '+bookingData.guests+'\n'+
+                'Special requirements: '+bookingData.requirements); 
+        
+             navigate("/confirmation");
+             console.log('form submitted!');
+      
+      };
+
+    return (
+          
+            <form id="bookingform" onSubmit={handleSubmit}>
                
                <label htmlFor="Name">Name:</label>
                <input type="text" id="Name" placeholder="Name"  minLength={2}
@@ -61,7 +96,8 @@ import { Link} from 'react-router-dom';
 
                <label htmlFor="Phone">Phone number</label>
                <input type="tel" id="Phone" placeholder="Phone number" 
-                  value={Phone} onChange={(e) => setPhone(e.target.value)} required></input>
+                  value={Phone} onChange={(e) => setPhone(e.target.value)} required
+                  minLength={8}></input>
 
                <label htmlFor="date">Date:</label>
                <input type="date" id="date"
@@ -84,7 +120,7 @@ import { Link} from 'react-router-dom';
                   <option>{'20:00'}</option>
                   <option>{'21:00'}</option>
                   <option>{'22:00'}</option>
- */}
+                    */}
                  </select> 
              
                       
@@ -105,11 +141,12 @@ import { Link} from 'react-router-dom';
                   value={requirements} onChange={(e) => setRequirements(e.target.value)}>
                </textarea>
                
-               <button type="submit" id="reserve-table-btn" onClick={handleClick}>
-                 <Link to="/about" className="button1">Reserve</Link>
+               <button type="submit" id="reserve-table-btn" 
+                  disabled={!Name||!Phone||!date}>Submit
+               
                </button>
            </form>
            
     );
-};
+                  };
 export default BookingForm;

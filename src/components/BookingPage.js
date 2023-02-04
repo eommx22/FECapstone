@@ -19,7 +19,9 @@ const BookingPage= () => {
         return availableTimes;
     }   
  
-   
+    
+
+
      return (
         <div id="bookingformdiv">
            <h1 id="bookingtitle">Booking a table</h1>
