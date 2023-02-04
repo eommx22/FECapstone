@@ -5,18 +5,18 @@ import {useReducer} from 'react';
 
 const BookingPage= () => {
 
-   let output=[];
-    const [availableTimes, setAvailableTimes] = useReducer(updateTimes(),initializeTimes());
+    let output=['17:00','18:00','19:00','20:00','21:00','22:00'];
+    const [availableTimes, setAvailableTimes] = useReducer(updateTimes,initializeTimes());
 
     function initializeTimes(){
        output=['17:00','18:00','19:00','20:00','21:00','22:00'];
-       //updateTimes(7);
+      
         return output;
       }
 
     function updateTimes() {
-        output.splice(0,1);
-        return output;
+        setAvailableTimes(availableTimes.splice(3,1));
+        return availableTimes;
     }   
  
    

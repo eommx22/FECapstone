@@ -2,7 +2,7 @@ const Section4 = () => {
     return (
       <section id="about">
           <div id="about_leftside">
-            <h1 id="title4">Little Lemon</h1>
+            <h1 id="title">Little Lemon</h1>
             <h3 id="Chicago2">Chicago</h3>
             <p id="description2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

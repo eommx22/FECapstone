@@ -1,9 +1,11 @@
+import {Link} from 'react-router-dom';
+
 const Section2= () => {
     return (
       <section id="highlights">
         <div id="row1">
            <h2>This week specials!</h2>
-           <button type="button" >Online Order</button>
+           <button type="button" ><Link to="/login" className="button1">Online Order</Link></button>
         </div>
         <div id="row2">
           <section id="card1" className="card">
@@ -14,7 +16,7 @@ const Section2= () => {
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra,
                lorem nec interdum finibus, augue.</p>
-            <button type="button">Order a delivery</button>
+               <button type="button" ><Link to="/login" className="button1">Order Delivery</Link></button>
           </section>
           <section id="card2" className="card">
             <img src="../assets/img/Bruschetta.jpg" alt="bruschetta"/>
@@ -24,7 +26,7 @@ const Section2= () => {
             </div>
             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra,
                lorem nec interdum finibus, augue.</p>
-            <button type="button">Order a delivery</button>
+               <button type="button" ><Link to="/login" className="button1">Order Delivery</Link></button>
           </section>
           <section id="card3" className="card">
             <img src="../assets/img/lemon dessert.jpg" alt="lemondessert"/>
@@ -34,7 +36,7 @@ const Section2= () => {
             </div>
             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Nulla pharetra, lorem nec interdum finibus, augue.</p>
-            <button type="button">Order a delivery</button>
+              <button type="button" ><Link to="/login" className="button1">Order Delivery</Link></button>
           </section>
         </div>
       </section>

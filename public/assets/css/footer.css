@@ -4,28 +4,24 @@ footer {
     grid-auto-flow: column;
     gap: 40px;
     color: #FFFFFF;
+    margin:auto;
     
        }
 footer img{
-    margin: 60px;
-    margin-left:100px;
+    margin:50px 20px 50px 120px;
 }
 footer nav {
     margin: 40px;
 }
-footer nav ul li{
-    
-    color:#FFFFFF;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-footer> nav> ul >li:hover{
-    
-    color:#ee9972;
-  
-}
+
+
+footer .nav-item {text-decoration: none;
+    color: #495e57;}
+footer .nav-item:hover {color:#ee9972;}
+
+
 #contact, #social_links{
-    margin-top:30px;
+    margin:30px 70px;
 }
 #contact  ul li,
 #social_links ul li

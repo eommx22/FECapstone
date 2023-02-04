@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 const Section1 = () => {
     return (
       <section id="hero_section">
@@ -5,7 +7,8 @@ const Section1 = () => {
            <h1>Little Lemon</h1>
            <h3 id="Chicago">Chicago</h3>
            <p id="description">Little Lemon is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-           <button type="button" id="reserv_btn">Reserve a table</button>
+           <button type="button" id="reserv_btn" >
+              <Link to="/reservations" className="button1">Reserve a table</Link></button>
          </div>
          <div id="hero_rightside">
             <img src="../assets/img/restaurantfood.jpg" alt='restaurant_food'/>

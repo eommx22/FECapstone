@@ -42,3 +42,8 @@ input , select{
 #number-of-guests{
     text-align: left;
 }
+
+.button1{color:#333333;
+    text-decoration: none;}
+.button1:hover{color:#FFFFFF;
+             text-decoration: none;}
