@@ -3,50 +3,71 @@
     #about {background-color: #f4ce14;
        max-width: 1400px;
        max-height: auto;
-       gap:auto;
+       
        display:grid;
-       grid-auto-flow: column ;
+       grid-template-columns: 45vw 45vw;
+       justify-content: center;
        
        margin:auto;
        
-    }}
+    }
+    #about_leftside{ display: flex;
+        flex-direction: column;
+        margin:4vw;}
+    #about_rightside{
+        display: block;
+        margin: 4vw;
+     }
+     #img1{
+        position: relative;
+        top:0px;
+        left:0px;
+        width:250px;
+        height:auto;
+        margin:auto;
+     
+        border-radius: 16px;}
+     #img2{
+         position: relative;
+         top:5vh;
+         left:80px;
+         width:250px;
+         height:auto;
+         margin:auto;
+         border-radius: 16px;}
+ 
+     
+     
+    
+
+}
 @media only screen and (max-width: 600px ){
-    #about{
+    #about{ background-color: #f4ce14;
             display: grid;
             grid-auto-flow: row;
-            gap:auto;
+            gap:10px;
             align-items: center;
             margin: auto ;
             padding-left: 25px;}
-  }
 
-#about_leftside{ display: flex;
-    flex-direction: column;
-    margin:4vw;}
-#about_rightside{
-    margin: 40px;
- }
- 
+    #about_leftside{ 
+            display: flex;
+            flex-direction: column;
+            margin:4vw;}
+    #about_rightside{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 20px;
+             }
 
-#img1{
-       position: relative;
-       top:0px;
-       left:100px;
-       width:350px;
+    #img1, #img2{
+       width:200px;
        height:auto;
-       margin:auto;
-    
+       margin:20px;        
        border-radius: 16px;}
-#img2{
-        position: relative;
-        top:-80px;
-        left:280px;
-        width:350px;
-        height:auto;
-        margin:auto;
-
-    
-       border-radius: 16px;}
+    }
+       
 #title {color:#333333;
         font-size: 40px;
         font-family:'Times New Roman', Times, serif;

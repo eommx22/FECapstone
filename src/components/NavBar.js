@@ -1,13 +1,13 @@
 import React from 'react';
 import {Routes, Route, Link} from 'react-router-dom';
 
-import Hero from './Hero';
 import About from './About';
 import LoginForm from './LoginForm';
 import Section2 from './Section2';
 
 import BookingPage from './BookingPage';
 import Specials from './Specials';
+import Main from './Main';
 
 
       const NavBar = () => {
@@ -29,7 +29,7 @@ import Specials from './Specials';
           </header>
           
           <Routes>
-            <Route path="/" element={<Hero/>} />
+            <Route path="/" element={<Main/>} />
             <Route path="/about" element={<About/>} />
             <Route path="/highlights" element={<Specials/>} />
             <Route path="/reservations" element={<BookingPage/>} />
